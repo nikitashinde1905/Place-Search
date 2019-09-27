@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keyword"
+                android:layout_marginLeft="3dp"/>
+
+            <TextView
+                android:id="@+id/keywordmessagetv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="Please enter mandatory field"
+                android:textSize="12dp"
+                android:textColor="@color/red"/>
+
+            <EditText
+                android:id="@+id/keywordet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:hint="Enter keyword" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:layout_marginLeft="3dp"/>
+
+            <Spinner
+                android:id="@+id/catergoryspinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:entries="@array/categories_arrays"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Distance (in miles)"
+                android:layout_marginLeft="3dp"/>
+
+                <EditText
+                    android:id="@+id/distanceet"
+                    android:layout_marginTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="15dp"
+                    android:hint="Enter Distance (Default 10 miles)" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From"
+                android:layout_marginLeft="3dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroup">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current location"
+                    android:id="@+id/currentlocation"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other Specify Location"
+                    android:id="@+id/otherlocation"
+                    android:checked="false">
+                </RadioButton>
+
+                <TextView
+                    android:id="@+id/locationmessagetv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please enter mandatory field"
+                    android:visibility="invisible"
+                    android:textSize="12dp"
+                    android:textColor="@color/red"/>
+            </RadioGroup>
+            <AutoCompleteTextView
+                android:id="@+id/locationet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:ems="10"
+                android:textSize="14sp"
+                android:hint="Type in the Location"
+                android:enabled="false">
+            </AutoCompleteTextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="SEARCH" />
+
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/clear"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="CLEAR" />
+
+            </LinearLayout>
+        </LinearLayout>
+</ScrollView>
